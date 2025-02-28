@@ -20,9 +20,20 @@ impl Config {
 }
 
 pub fn run(config: Config) -> Result<(), Box<dyn Error>> {
-    let conent =
+    let _conent =
         fs::read_to_string(config.file_path).expect("Should be able to read path to the file");
 
-    println!("Contents of the file:\n{conent}");
     Ok(())
+}
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn one_result() {
+        let query = "duct";
+
+        let content = "something that has to do with duct";
+    }
 }
