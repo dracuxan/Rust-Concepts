@@ -12,7 +12,6 @@ test:
 
 help:
 	@echo "Usage: make [target]"
-	@echo "Available targets:"
 	@echo "  build      Build the application"
 	@echo "  run        Run the application"
 	@echo "  test       Run all tests"
