@@ -49,4 +49,11 @@ fn main() {
     let el = a[index];
 
     println!("Element at {index} = {el}");
+
+    let x = {
+        let y = 4;
+        y + 1
+    };
+
+    println!("{x}");
 }
