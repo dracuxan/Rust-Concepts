@@ -1,5 +1,3 @@
-use std::io;
-
 fn main() {
     let mut x = 10;
     println!("{x}");
@@ -37,23 +35,69 @@ fn main() {
 
     println!("Enter the index number: ");
 
-    let a = [3; 5];
-    let mut index = String::new();
+    // let a = [3; 5];
+    // let mut index = String::new();
+    //
+    // io::stdin()
+    //     .read_line(&mut index)
+    //     .expect("Expected a number ");
+    //
+    // let index: usize = index.trim().parse().expect("Expected a number");
+    //
+    // let el = a[index];
+    //
+    // println!("Element at {index} = {el}");
 
-    io::stdin()
-        .read_line(&mut index)
-        .expect("Expected a number ");
-
-    let index: usize = index.trim().parse().expect("Expected a number");
-
-    let el = a[index];
-
-    println!("Element at {index} = {el}");
-
-    let x = {
-        let y = 4;
+    let mut x = {
+        let y = 0;
         y + 1
     };
 
     println!("{x}");
+    x = plus_one(x);
+    println!("{x}");
+    let mut c = 1;
+    let r = loop {
+        c += 1;
+        if c % 2 == 0 {
+            break c * 100;
+        }
+    };
+
+    println!("Value of r = {r}");
+    special_loop();
+}
+
+fn plus_one(x: i32) -> i32 {
+    if x < 0 {
+        x
+    } else {
+        x + 1
+    }
+}
+
+fn special_loop() {
+    let mut c = 0;
+    'counting_up: loop {
+        println!("{c}");
+        let mut r = 10;
+        loop {
+            println!("{r}");
+            if r == 9 {
+                break;
+            }
+            if c == 1 {
+                break 'counting_up;
+            }
+            r -= 1;
+        }
+        c += 1;
+    }
+    rev_loop(10);
+}
+
+fn rev_loop(c: u32) {
+    for i in (1..c).rev() {
+        println!("{i}");
+    }
 }
