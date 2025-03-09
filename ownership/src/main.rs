@@ -1,4 +1,4 @@
-use std::io;
+use std::{io, usize};
 
 fn main() {
     let mut s = {
@@ -17,4 +17,10 @@ fn main() {
     let s1 = String::from("New String!");
     let s2 = s1;
     println!("{s2}");
+    let l = cal_len(&s2);
+    println!("{s2} = {l}")
+}
+
+fn cal_len(s: &String) -> usize {
+    s.len()
 }
