@@ -14,13 +14,20 @@ fn main() {
 
     println!("Hello {s}!");
 
-    let s1 = String::from("New String!");
-    let s2 = s1;
-    println!("{s2}");
-    let l = cal_len(&s2);
-    println!("{s2} = {l}")
+    // let s1 = String::from("New String!");
+    // let s2 = s1;
+    // println!("{s2}");
+    let l = cal_len(&s);
+    println!("Length of  string: {s} = {l}");
+
+    add_string(&mut s);
+    println!("New string: {s}");
 }
 
 fn cal_len(s: &String) -> usize {
     s.len()
+}
+
+fn add_string(s: &mut String) {
+    s.push_str(", hello!")
 }
