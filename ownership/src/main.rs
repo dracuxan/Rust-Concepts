@@ -14,9 +14,6 @@ fn main() {
 
     println!("Hello {s}!");
 
-    // let s1 = String::from("New String!");
-    // let s2 = s1;
-    // println!("{s2}");
     let l: usize = cal_len(&s);
     println!("Length of  string: {s} = {l}");
 
