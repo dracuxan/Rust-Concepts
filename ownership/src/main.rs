@@ -17,7 +17,7 @@ fn main() {
     // let s1 = String::from("New String!");
     // let s2 = s1;
     // println!("{s2}");
-    let l = cal_len(&s);
+    let l: usize = cal_len(&s);
     println!("Length of  string: {s} = {l}");
 
     add_string(&mut s);
